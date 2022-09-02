@@ -13,21 +13,20 @@
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+09-02-22 11:21am - server up and running with populated book db
 
 ## Estimates
 
-Name of feature: ________________________________
+Name of feature: Storage: As a user, I'd like to view the list of books, so that whenever I visit the page, I can see the a full list of best books.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2 hours
 
-Start time: _____
+Start time: approx. 10am
 
-Finish time: _____
+Finish time: 11:21am
 
-Actual time needed to complete: _____
+Actual time needed to complete: approx 1.5 hours
 
 ## Credit and Collaborations
 
