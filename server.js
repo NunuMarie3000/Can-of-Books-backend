@@ -14,10 +14,14 @@ const bookRoute = require('./routes/bookRoute')
 const home = require('./routes/home')
 const test = require('./routes/test')
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING, ()=>{
+mongoose.connect('mongodb+srv://nunumarie3000:marieflys%2301@cluster0.pgfcpyb.mongodb.net/?retryWrites=true&w=majority', ()=>{
   console.log('connected')
 },
 err=>console.log(err))
+// mongoose.connect(process.env.MONGODB_CONNECTION_STRING, ()=>{
+//   console.log('connected')
+// },
+// err=>console.log(err))
 
 app.use(home)
 app.use(test)
