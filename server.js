@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 const mongoose = require('mongoose')
 
 // const Book = require('./models/Book')
-const bookRoute = require('./routes/bookRoute')
+// const bookRoute = require('./routes/bookRoute')
 // const seedBooks = require('./funcs/seedBooks')
 // seedBooks()
 
@@ -28,7 +28,18 @@ app.get('/test', (req, res) => {
   res.send('test request received')
 })
 
-app.use(bookRoute)
+const Book = require('./models/Book')
+
+app.get('/books', async(req,res)=>{
+  try {
+    const allBooks = await Book.find({})
+    res.send(allBooks)
+  } catch (error) {
+    console.log(error.message)
+  }
+})
+
+// app.use(bookRoute)
 
 
 app.listen(process.env.PORT, ()=>console.log('server up and running'))
