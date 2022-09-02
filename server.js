@@ -21,10 +21,12 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING, ()=>{
 err=>console.log(err))
 
 app.get('/', (req,res)=>{
+  console.log('this the homepage')
   res.send('homepage')
 })
 
 app.get('/test', (req, res) => {
+  console.log('this the test route')
   res.send('test request received')
 })
 
