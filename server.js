@@ -11,6 +11,7 @@ app.use(bodyParser.json())
 const mongoose = require('mongoose')
 
 const bookRoute = require('./routes/bookRoute')
+const bookPostRoute = require('./routes/bookPostRoute')
 const home = require('./routes/home')
 const test = require('./routes/test')
 
@@ -22,6 +23,7 @@ err=>console.log(err))
 app.use(home)
 app.use(test)
 app.use(bookRoute)
+app.use(bookPostRoute)
 
 
 app.listen(process.env.PORT, ()=>console.log('server up and running'))

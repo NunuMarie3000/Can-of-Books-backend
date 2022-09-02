@@ -15,6 +15,7 @@
 ## Change Log
 
 09-02-22 11:21am - server up and running with populated book db
+09-02-22 3:25pm - post route to create books up and running
 
 ## Estimates
 
@@ -27,6 +28,16 @@ Start time: approx. 10am
 Finish time: 11:21am
 
 Actual time needed to complete: approx 1.5 hours
+
+Name of feature: Create: As a user, I'd like to add a new book to the shelf, so that I can update the list with my own recommendations.
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 2:48pm
+
+Finish time:
+
+Actual time needed to complete:
 
 ## Credit and Collaborations
 
