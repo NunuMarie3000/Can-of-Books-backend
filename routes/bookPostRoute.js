@@ -16,7 +16,7 @@ router.post('/books', async(req,res)=>{
     const newBook = await Book.create(req.body)
     await newBook.save()
     console.log(newBook)
-    res.status(201).send(`New Book Created :) ${newBook}`) 
+    res.status(201).send(newBook) 
   } catch (error) {
     console.log(error.message)
     res.send(error)
