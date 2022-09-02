@@ -3,20 +3,22 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser')
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 3001;
-
+app.use(bodyParser.json())
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING, ()=>{
-  console.log('connected')
-},
-err=>console.log(err))
+
 // const Book = require('./models/Book')
 const bookRoute = require('./routes/bookRoute')
 // const seedBooks = require('./funcs/seedBooks')
 // seedBooks()
+
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, ()=>{
+  console.log('connected')
+},
+err=>console.log(err))
 
 app.get('/', (req,res)=>{
   res.send('homepage')
@@ -28,4 +30,5 @@ app.get('/test', (req, res) => {
 
 app.use(bookRoute)
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+
+app.listen(process.env.PORT, ()=>console.log('server up and running'))
