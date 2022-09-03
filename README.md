@@ -19,21 +19,31 @@
 
 ## Estimates
 
-Name of feature: Storage: As a user, I'd like to view the list of books, so that whenever I visit the page, I can see the a full list of best books.
+1.Name of feature: Book Component: As a user, I'd like to see the list of books, so that I can see what's recommended to me.
 
 Estimate of time needed to complete: 2 hours
 
-Start time: approx. 10am
+Start time: approx. 1pm
 
-Finish time: 11:21am
+Finish time: 2:05pm
 
-Actual time needed to complete: approx 1.5 hours
+Actual time needed to complete: approx. 1 hour
 
-Name of feature: Create: As a user, I'd like to add a new book to the shelf, so that I can update the list with my own recommendations.
+2.Name of feature: Create: As a user, I'd like to add a new book to the shelf, so that I can update the list with my own recommendations.
 
 Estimate of time needed to complete: 5 hours
 
 Start time: 2:48pm
+
+Finish time:6:24pm
+
+Actual time needed to complete: approx. 4 hours
+
+3.Name of feature: Delete: As a user, I want to remove books from my list, so that only the most important books are on my shelf.
+
+Estimate of time needed to complete: 6 hours
+
+Start time:2:50pm
 
 Finish time:
 

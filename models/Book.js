@@ -19,6 +19,10 @@ const bookSchema = new mongoose.Schema({
   }
 })
 
+bookSchema.statics.deleteById = function(_id) {
+  return this.deleteOne({ _id: _id })
+};
+
 const bookModel = mongoose.model('Book', bookSchema)
 
 module.exports = bookModel
