@@ -16,6 +16,7 @@
 
 09-02-22 11:21am - server up and running with populated book db
 09-02-22 3:25pm - post route to create books up and running
+09-03-22 3:36pm -delete route up and running, bout to deploy to herokuapp
 
 ## Estimates
 
@@ -43,11 +44,11 @@ Actual time needed to complete: approx. 4 hours
 
 Estimate of time needed to complete: 6 hours
 
-Start time:2:50pm
+Start time: 2:50pm
 
-Finish time:
+Finish time: 4:00pm
 
-Actual time needed to complete:
+Actual time needed to complete: 1 hour, 10 minutes
 
 ## Credit and Collaborations
 
