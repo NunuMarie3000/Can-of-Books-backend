@@ -1,7 +1,7 @@
 # Can of Books Backend
 
 **Author**: Storm O'Bryant
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.0
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -17,6 +17,7 @@
 09-02-22 11:21am - server up and running with populated book db
 09-02-22 3:25pm - post route to create books up and running
 09-03-22 3:36pm -delete route up and running, bout to deploy to herokuapp
+09-06-22 10:02am - put route up and running, bout to deploy to herokuapp
 
 ## Estimates
 
@@ -50,7 +51,19 @@ Finish time: 4:00pm
 
 Actual time needed to complete: 1 hour, 10 minutes
 
+4.Name of feature: Update: As a user, I want to update book details on my list, so that I can change the book status, or update the book details as I learn more about it.
+
+Estimate of time needed to complete: 6 hours
+
+Start time: 9:50am
+
+Finish time:
+
+Actual time needed to complete:
+
 ## Credit and Collaborations
+
+Code Fellows for the Can-of-Books frontend and backend template starter code
 
 ### Logistical
 

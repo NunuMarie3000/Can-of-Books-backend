@@ -13,6 +13,7 @@ const mongoose = require('mongoose')
 const bookRoute = require('./routes/bookRoute')
 const bookPostRoute = require('./routes/bookPostRoute')
 const bookDeleteRoute = require('./routes/bookDeleteRoute')
+const bookUpdateRoute = require('./routes/bookUpdateRoute')
 const home = require('./routes/home')
 const test = require('./routes/test')
 
@@ -26,6 +27,7 @@ app.use(test)
 app.use(bookRoute)
 app.use(bookPostRoute)
 app.use(bookDeleteRoute)
+app.use(bookUpdateRoute)
 
 
 app.listen(process.env.PORT, ()=>console.log('server up and running'))
