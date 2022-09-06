@@ -5,20 +5,13 @@ const Book = require('../models/Book')
 router.put('/books/:id', async(req,res)=>{
   // the id is just gonna be the numbers and stuff, not the objectId(""), just the stuff in quotation marks
   try {
-    let toUpdateId = req.params.id
     // we have the id, then we need to
     // use the id to find it in let bookToUpdate = Book.find({}).where("_id").equals(toUpdateId)
     // i can make this less verbose by creating static method in the schema
     // once i have the book, i need to update it with whatever's in the request body
     // so...
-    // bookToUpdate = {
-      // title: req.body.title
-      // image: req.body.image
-      // description: req.body.description
-      // status: req.body.status
-    // }
-    // bookToUpdate.save()
-    // res.status(202).send(bookToUpdate)
+    // to be fair, i could just use Book.findOneAndUpdate(), but Kyle from webdevsimplified said he stays away...so imma stay away too
+    let toUpdateId = req.params.id
     await Book.find({}).where("_id").equals(toUpdateId).updateOne(req.body)
     let updatedBook = await Book.find({}).where("_id").equals(toUpdateId)
     // i wanna return the updated book
