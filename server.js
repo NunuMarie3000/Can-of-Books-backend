@@ -22,7 +22,7 @@ err=>console.log(err))
 app.use(cors());
 app.use(bodyParser.json())
 app.use(verifyJwt)
-app.use(errMiddleware)
+// app.use(errMiddleware)
 app.use(home)
 app.use(test)
 app.use('/books', booksRoutes)
