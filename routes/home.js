@@ -1,9 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req,res)=>{
-  console.log('this the homepage')
-  res.send('homepage')
+router.get('/' , async(req,res)=>{
+  try {
+    res.send('homepage')
+  } catch (error) {
+    console.log(error.message)
+    res.send(error.message)
+  }
 })
 
 module.exports = router

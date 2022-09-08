@@ -18,6 +18,7 @@
 09-02-22 3:25pm - post route to create books up and running
 09-03-22 3:36pm -delete route up and running, bout to deploy to herokuapp
 09-06-22 10:02am - put route up and running, bout to deploy to herokuapp
+09-08-22 5:26pm - added auth0 to backend, updated routes so its only sending back books if the id on the book matches the user's id that was created upon login, bout to deploy to herokuapp, fingers crossed
 
 ## Estimates
 

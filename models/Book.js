@@ -16,6 +16,12 @@ const bookSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     required: true
+  },
+  // maybe add an owner to this that references the userSchema?
+  reader: {
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: "User",
+    required:true
   }
 })
 

@@ -1,30 +1,53 @@
 const express = require('express')
 const router = express.Router()
+const axios = require('axios')
 const Book = require('../models/Book')
+const User = require('../models/User')
+const checkUser = require('../funcs/checkUser')
 
 // READ ALL
 router.get('/', async(req,res)=>{
   try {
-    const allBooks = await Book.find({})
-    res.status(200).send(allBooks)
+    // req.auth not req.user
+    // need to extract jwt from the header
+    const accessToken = req.headers.authorization.split(' ')[1]
+    const response = await axios.get(`${process.env.ISSUER}userinfo`, {
+      headers: {
+        authorization: `Bearer ${accessToken}`
+      }
+    })
+    // i wanna extract userinfo and create a new user for db
+    // then i can have that user create books with their email linked and only return books linked with that users' email
+    const userInfo = response.data
+    // this is returning my mongodb user with an id, email, and name
+    const user = await checkUser(userInfo)
+
+    const allBooks = await Book.findOne({}).where("reader").equals(user._id)
+    console.log(allBooks)
+    console.log(user)
+    // res.status(200).send(allBooks)
+    res.status(200).json({
+      books: allBooks,
+      userInfo: user
+    })
   } catch (error) {
-    console.log(error.message)
-    res.send(error)
+    res.send(error.message)
   }
+
+
+  // try {
+  //   const allBooks = await Book.find({})
+  //   res.status(200).send(allBooks)
+  // } catch (error) {
+  //   console.log(error.message)
+  //   res.send(error)
+  // }
+  
 })
 
 // CREATE ONE
 router.post('/', async(req,res)=>{
   try {
-    // using object literal syntax
-    // const { title, image, description, status} = req.body
-    // const newBook = await Book.create({
-    //   title,
-    //   image,
-    //   description,
-    //   status
-    // })
-    // not object literal
     const newBook = await Book.create(req.body)
     await newBook.save()
     console.log(newBook)
