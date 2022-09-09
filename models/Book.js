@@ -18,10 +18,14 @@ const bookSchema = new mongoose.Schema({
     required: true
   },
   // maybe add an owner to this that references the userSchema?
-  reader: {
-    type: mongoose.Schema.Types.ObjectId, 
-    ref: "User",
-    required:true
+  // reader: {
+  //   type: mongoose.Schema.Types.ObjectId, 
+  //   ref: "User",
+  //   required:true
+  // }
+  user:{
+    type: String,
+    required: true
   }
 })
 

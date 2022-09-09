@@ -1,5 +1,4 @@
 const User = require('../models/User')
-const Book = require('../models/Book')
 
 const checkUser = async(user) => {
   try {
@@ -9,6 +8,7 @@ const checkUser = async(user) => {
     email: user.email,
   })
   await newUser.save()
+  return newUser
   } catch (error) {
     console.log(error.message)
   }

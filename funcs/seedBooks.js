@@ -7,7 +7,7 @@ const seedBooks = async()=>{
       image: "https://images-na.ssl-images-amazon.com/images/I/A1e37vzc5VL.jpg",
       description: "An amazing book by Tomi Adeyemi",
       status: true,
-      reader: '631a58065d1e480151965675'
+      user: 'vmarie1997@gmail.com'
     })
     // const book2 = await Book.create({
     //   title:"Children of Virtue and Vengeance",
